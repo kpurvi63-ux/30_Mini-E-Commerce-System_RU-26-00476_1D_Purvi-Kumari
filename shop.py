@@ -161,10 +161,11 @@ def delete_product():
         return
 
     products.remove(p)
+
     if pid in cart:
         del cart[pid]
-        save_products()
-        print("Product '" + p["name"] + "' deleted.Products lefts: " + str(len(products)))
+    save_products()
+    print("Product '" + p["name"] + "' deleted. Products lefts: " + str(len(products)))
 
 
 #Customer functions
